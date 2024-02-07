@@ -1,0 +1,82 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.calculator {
+  background-color:crimson;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  width: 300px;
+}
+
+.display {
+  margin-bottom: 10px;
+}
+
+.input, .output {
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  background-color: #555;
+  color: white;
+}
+
+.output {
+  margin-top: 5px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn {
+  padding: 20px;
+  font-size: 20px;
+  border: none;
+  background-color: #aaa;
+  color: #333;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.btn:hover {
+  background-color: #999;
+}
+
+.digit {
+  grid-column: span 2;
+}
+
+.operator {
+  grid-column: span 1;
+}
+
+.equals {
+  grid-column: span 1;
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768p) {
+  .calculator {
+    width: 250px; /* Adjusted width for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .calculator {
+    width: 200px; /* Further adjusted width for even smaller screens */
+  }
+
+  .btn {
+    padding: 15px;
+    font-size: 16px;
+  }
+}
